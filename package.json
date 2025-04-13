@@ -1,6 +1,6 @@
 {
   "name": "igdb-types",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "TypeScript type definitions for IGDB API responses",
   "type": "module",
   "main": "dist/index.js",
