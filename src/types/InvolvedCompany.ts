@@ -1,3 +1,6 @@
+import {Company} from "./Company";
+import {Game} from "./Game";
+
 /**
  * Represents involved company information.
  *
@@ -9,16 +12,16 @@ export type InvolvedCompany = {
     checksum: string;
 
     /** Reference ID for Company. */
-    company: number; // Assuming Company is a reference ID
+    company: number | Company;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Indicates if the company was a developer. */
     developer?: boolean;
 
     /** Reference ID for Game. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** Indicates if the company was involved in porting. */
     porting?: boolean;
@@ -30,5 +33,5 @@ export type InvolvedCompany = {
     supporting?: boolean;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

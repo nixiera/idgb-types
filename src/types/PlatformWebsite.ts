@@ -1,3 +1,5 @@
+import {WebsiteCategoryEnum} from "../enums/WebsiteCategoryEnum";
+
 /**
  * Represents platform website information.
  *
@@ -6,7 +8,7 @@
  */
 export type PlatformWebsite = {
     /** The service this website links to. */
-    category?: string; // Assuming Category Enum can be represented as a string
+    category?: number | WebsiteCategoryEnum;
 
     /** UUID hash of the object. */
     checksum: string;

@@ -1,3 +1,5 @@
+import {Company} from "./Company";
+
 /**
  * Represents platform version company information.
  *
@@ -12,7 +14,7 @@ export type PlatformVersionCompany = {
     comment?: string;
 
     /** Reference ID for Company. The company responsible for developing this platform version. */
-    company: number; // Assuming Company is a reference ID
+    company: number | Company;
 
     /** Indicates if the company was a developer. */
     developer?: boolean;

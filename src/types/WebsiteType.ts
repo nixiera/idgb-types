@@ -9,11 +9,11 @@ export type WebsiteType = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** The website type. */
     type: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

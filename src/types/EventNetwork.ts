@@ -1,3 +1,6 @@
+import {Event} from "./Event";
+import {NetworkType} from "./NetworkType";
+
 /**
  * Represents event network information.
  *
@@ -9,16 +12,16 @@ export type EventNetwork = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for Event. The event associated with this URL. */
-    event: number; // Assuming Event is a reference ID
+    event: number | Event;
 
     /** Reference ID for Network Type. Network type. */
-    network_type: number; // Assuming Network Type is a reference ID
+    network_type: number | NetworkType;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;

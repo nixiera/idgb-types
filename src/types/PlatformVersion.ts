@@ -1,3 +1,8 @@
+import {Company} from "./Company";
+import {PlatformVersionCompany} from "./PlatformVersionCompany";
+import {PlatformLogo} from "./PlatformLogo";
+import {PlatformVersionReleaseDate} from "./PlatformVersionReleaseDate";
+
 /**
  * Represents platform version information.
  *
@@ -9,7 +14,7 @@ export type PlatformVersion = {
     checksum: string;
 
     /** Array of Platform Version Company IDs. Who developed this platform version. */
-    companies?: number[]; // Assuming Platform Version Company ID is a number
+    companies?: number[] | Company[];
 
     /** The network capabilities. */
     connectivity?: string;
@@ -21,7 +26,7 @@ export type PlatformVersion = {
     graphics?: string;
 
     /** Reference ID for Platform Version Company. Who manufactured this version of the platform. */
-    main_manufacturer?: number; // Assuming Platform Version Company is a reference ID
+    main_manufacturer?: number | PlatformVersionCompany;
 
     /** The type of media this version accepted. */
     media?: string;
@@ -39,10 +44,10 @@ export type PlatformVersion = {
     output?: string;
 
     /** Reference ID for Platform Logo. The logo of this platform version. */
-    platform_logo?: number; // Assuming Platform Logo is a reference ID
+    platform_logo?: number | PlatformLogo;
 
     /** Array of Platform Version Release Date IDs. When this platform was released. */
-    platform_version_release_dates?: number[]; // Assuming Platform Version Release Date ID is a number
+    platform_version_release_dates?: number[] | PlatformVersionReleaseDate[];
 
     /** The maximum resolution. */
     resolutions?: string;

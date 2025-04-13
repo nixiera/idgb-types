@@ -1,3 +1,7 @@
+import {Company} from "./Company";
+import {GameEngineLogo} from "./GameEngineLogo";
+import {Platform} from "./Platform";
+
 /**
  * Represents game engine information.
  *
@@ -9,28 +13,28 @@ export type GameEngine = {
     checksum: string;
 
     /** Array of Company IDs. Companies who used this game engine. */
-    companies?: number[]; // Assuming Company ID is a number
+    companies?: number[] | Company[];
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Description of the game engine. */
     description?: string;
 
     /** Reference ID for Game Engine Logo. Logo of the game engine. */
-    logo?: number; // Assuming Game Engine Logo is a reference ID
+    logo?: number | GameEngineLogo;
 
     /** Name of the game engine. */
     name: string;
 
     /** Array of Platform IDs. Platforms this game engine was deployed on. */
-    platforms?: number[]; // Assuming Platform ID is a number
+    platforms?: number[] | Platform[];
 
     /** A url-safe, unique, lower-case version of the name. */
     slug: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;

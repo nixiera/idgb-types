@@ -1,3 +1,6 @@
+import {GameVersionFeatureCategoryEnum} from "../enums/GameVersionFeatureCategoryEnum";
+import {GameVersionFeatureValue} from "./GameVersionFeatureValue";
+
 /**
  * Represents game version feature information.
  *
@@ -6,7 +9,7 @@
  */
 export type GameVersionFeature = {
     /** The category of the feature description. */
-    category?: string; // Assuming Category Enum can be represented as a string
+    category?: number | GameVersionFeatureCategoryEnum;
 
     /** UUID hash of the object. */
     checksum: string;
@@ -21,5 +24,5 @@ export type GameVersionFeature = {
     title?: string;
 
     /** Array of Game Version Feature Value IDs. The bool/text value of the feature. */
-    values?: number[]; // Assuming Game Version Feature Value ID is a number
+    values?: number[] | GameVersionFeatureValue;
 };

@@ -1,3 +1,5 @@
+import {EventNetwork} from "./EventNetwork";
+
 /**
  * Represents network type information.
  *
@@ -9,14 +11,14 @@ export type NetworkType = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Array of Event Network IDs. Urls associated with the event. */
-    event_networks?: number[]; // Assuming Event Network ID is a number
+    event_networks?: number[] | EventNetwork[];
 
     /** The name of the network type. */
     name: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

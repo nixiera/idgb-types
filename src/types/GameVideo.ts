@@ -1,3 +1,5 @@
+import {Game} from "./Game";
+
 /**
  * Represents game video information.
  *
@@ -9,7 +11,7 @@ export type GameVideo = {
     checksum: string;
 
     /** Reference ID for Game. The game this video is associated with. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** The name of the video. */
     name: string;

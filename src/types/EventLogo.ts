@@ -1,3 +1,5 @@
+import {Event} from "./Event";
+
 /**
  * Represents event logo information.
  *
@@ -15,10 +17,10 @@ export type EventLogo = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for Event. The event associated with this logo. */
-    event: number; // Assuming Event is a reference ID
+    event: number | Event;
 
     /** The height of the image in pixels. */
     height?: number;
@@ -27,7 +29,7 @@ export type EventLogo = {
     image_id?: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;

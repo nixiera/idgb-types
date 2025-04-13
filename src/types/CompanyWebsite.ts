@@ -1,3 +1,6 @@
+import {WebsiteType} from "./WebsiteType";
+import {WebsiteCategoryEnum} from "../enums/WebsiteCategoryEnum";
+
 /**
  * Represents company website information.
  *
@@ -6,7 +9,7 @@
  */
 export type CompanyWebsite = {
     /** @deprecated DEPRECATED! Use `type` instead. */
-    category?: string; // Assuming Category Enum can be represented as a string
+    category?: number | WebsiteCategoryEnum;
 
     /** UUID hash of the object. */
     checksum: string;
@@ -15,7 +18,7 @@ export type CompanyWebsite = {
     trusted?: boolean;
 
     /** Reference ID for Website Type. The website type associated with the website. */
-    type?: number; // Assuming Website Type is a reference ID
+    type?: number | WebsiteType;
 
     /** The website address (URL) of the item. */
     url?: string;

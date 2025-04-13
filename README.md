@@ -15,7 +15,7 @@ import { Game, Company } from 'igdb-types';
 
 // Use the types in your code
 const game: Game = {
-  // ... game properties
+ 
 };
 ```
 

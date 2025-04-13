@@ -1,3 +1,7 @@
+import {Collection} from "./Collection";
+import {Game} from "./Game";
+import {CollectionMembershipType} from "./CollectionMembershipType";
+
 /**
  * Represents collection membership information.
  *
@@ -9,17 +13,17 @@ export type CollectionMembership = {
     checksum: string;
 
     /** Reference ID for Collection. The collection that is associated with this membership. */
-    collection: number; // Assuming Collection is a reference ID, so it should be a number.
+    collection: number | Collection;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for Game. The game that is associated with this membership. */
-    game: number; // Assuming Game is a reference ID, so it should be a number.
+    game: number | Game;
 
     /** Reference ID for Collection Membership Type. The Collection Membership Type. */
-    type: number; // Assuming Collection Membership Type is a reference ID, so it should be a number.
+    type: number | CollectionMembershipType;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

@@ -1,3 +1,7 @@
+import {Game} from "./Game";
+import {Language} from "./Language";
+import {LanguageSupportType} from "./LanguageSupportType";
+
 /**
  * Represents language support information.
  *
@@ -9,17 +13,17 @@ export type LanguageSupport = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for Game. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** Reference ID for Language. */
-    language: number; // Assuming Language is a reference ID
+    language: number | Language;
 
     /** Reference ID for Language Support Type. */
-    language_support_type: number; // Assuming Language Support Type is a reference ID
+    language_support_type: number | LanguageSupportType;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

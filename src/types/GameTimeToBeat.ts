@@ -15,7 +15,7 @@ export type GameTimeToBeat = {
     count?: number;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** The ID of the game associated with the time to beat data. */
     game_id: number;
@@ -27,5 +27,5 @@ export type GameTimeToBeat = {
     normally?: number;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

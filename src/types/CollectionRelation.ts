@@ -1,3 +1,6 @@
+import {Collection} from "./Collection";
+import {CollectionRelationType} from "./CollectionRelationType";
+
 /**
  * Represents collection relation information.
  *
@@ -9,17 +12,17 @@ export type CollectionRelation = {
     checksum: string;
 
     /** Reference ID for Collection. The child collection of this collection. */
-    child_collection: number; // Assuming Collection is a reference ID
+    child_collection: number | Collection;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for Collection. The parent collection of this collection. */
-    parent_collection: number; // Assuming Collection is a reference ID
+    parent_collection: number | Collection;
 
     /** Reference ID for Collection Relation Type. The collection relationship type. */
-    type: number; // Assuming Collection Relation Type is a reference ID
+    type: number | CollectionRelationType;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

@@ -1,3 +1,5 @@
+import {CollectionType} from "./CollectionType";
+
 /**
  * Represents collection membership type information.
  *
@@ -6,13 +8,13 @@
  */
 export type CollectionMembershipType = {
     /** Reference ID for Collection Type. The allowed collection type. */
-    allowed_collection_type: number; // Assuming Collection Type is a reference ID
+    allowed_collection_type: number | CollectionType;
 
     /** UUID hash of the object. */
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Description of the membership type. */
     description?: string;
@@ -21,5 +23,5 @@ export type CollectionMembershipType = {
     name: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

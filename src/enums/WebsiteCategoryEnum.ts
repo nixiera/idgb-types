@@ -1,4 +1,4 @@
-enum WebsiteCategoryEnum {
+export enum WebsiteCategoryEnum {
     official = 1,
     wikia = 2,
     wikipedia = 3,

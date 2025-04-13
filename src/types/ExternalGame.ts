@@ -1,3 +1,10 @@
+import {ExternalGameCategoryEnum} from "../enums/ExternalGameCategoryEnum";
+import {ExternalGameSource} from "./ExternalGameSource";
+import {Game} from "./Game";
+import {GameReleaseFormat} from "./GameReleaseFormat";
+import {ExternalGameMediaEnum} from "../enums/ExternalGameMediaEnum";
+import {Platform} from "./Platform";
+
 /**
  * Represents external game information.
  *
@@ -6,7 +13,7 @@
  */
 export type ExternalGame = {
     /** @deprecated DEPRECATED! Use `external_game_source` instead. */
-    category?: string; // Assuming Category Enum can be represented as a string
+    category?: number | ExternalGameCategoryEnum;
 
     /** UUID hash of the object. */
     checksum: string;
@@ -15,31 +22,31 @@ export type ExternalGame = {
     countries?: number[];
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for External Game Source. The source of the external game. */
-    external_game_source: number; // Assuming External Game Source is a reference ID
+    external_game_source: number | ExternalGameSource;
 
     /** Reference ID for Game. The IGDB ID of the game. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** Reference ID for Game Release Format. The release format of the external game. */
-    game_release_format: number; // Assuming Game Release Format is a reference ID
+    game_release_format: number | GameReleaseFormat;
 
     /** @deprecated DEPRECATED! Use `game_release_format` instead. */
-    media?: string; // Assuming Media Enum can be represented as a string
+    media?: number | ExternalGameMediaEnum;
 
     /** The name of the game according to the other service. */
     name: string;
 
     /** Reference ID for Platform. The platform of the external game product. */
-    platform: number; // Assuming Platform is a reference ID
+    platform: number | Platform;
 
     /** The other service's ID for this game. */
     uid?: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;
