@@ -1,3 +1,7 @@
+import {ExternalGameSource} from "./ExternalGameSource";
+import {PopularitySourceEnum} from "../enums/PopularitySourceEnum";
+import {PopularityType} from "./PopularityType";
+
 /**
  * Represents popularity primitive information.
  *
@@ -6,29 +10,29 @@
  */
 export type PopularityPrimitive = {
     /** The calculated at timestamp. */
-    calculated_at?: string; // Assuming datetime can be represented as a string
+    calculated_at?: string;
 
     /** UUID hash of the object. */
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for External Game Source. */
-    external_popularity_source: number; // Assuming External Game Source is a reference ID
+    external_popularity_source: number | ExternalGameSource;
 
     /** The game ID. */
     game_id?: number;
 
     /** @deprecated DEPRECATED! Use `external_popularity_source` instead. */
-    popularity_source?: string; // Assuming Popularity Source Enum can be represented as a string
+    popularity_source?: number | PopularitySourceEnum;
 
     /** Reference ID for Popularity Type. */
-    popularity_type: number; // Assuming Popularity Type is a reference ID
+    popularity_type: number | PopularityType;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The popularity value. */
-    value?: number; // Assuming bigdecimal can be represented as a number
+    value?: number;
 };

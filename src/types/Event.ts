@@ -1,3 +1,8 @@
+import {EventLogo} from "./EventLogo";
+import {EventNetwork} from "./EventNetwork";
+import {Game} from "./Game";
+import {GameVideo} from "./GameVideo";
+
 /**
  * Represents event information.
  *
@@ -9,22 +14,22 @@ export type Event = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** The description of the event. */
     description?: string;
 
     /** End time of the event in UTC. */
-    end_time?: string; // Assuming datetime can be represented as a string
+    end_time?: string;
 
     /** Reference ID for Event Logo. Logo of the event. */
-    event_logo?: number; // Assuming Event Logo is a reference ID
+    event_logo?: number | EventLogo;
 
     /** Array of Event Network IDs. Urls associated with the event. */
-    event_networks?: number[]; // Assuming Event Network ID is a number
+    event_networks?: number[] | EventNetwork[];
 
     /** Array of Game IDs. Games featured in the event. */
-    games?: number[];
+    games?: number[] | Game[];
 
     /** URL to the livestream of the event. */
     live_stream_url?: string;
@@ -36,14 +41,14 @@ export type Event = {
     slug: string;
 
     /** Start time of the event in UTC. */
-    start_time?: string; // Assuming datetime can be represented as a string
+    start_time?: string;
 
     /** Timezone the event is in. */
     time_zone?: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** Array of Game Video IDs. Trailers featured in the event. */
-    videos?: number[]; // Assuming Game Video ID is a number
+    videos?: number[] | GameVideo[];
 };

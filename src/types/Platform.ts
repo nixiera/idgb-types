@@ -1,3 +1,10 @@
+import {PlatformCategoryEnum} from "../enums/PlatformCategoryEnum";
+import {PlatformFamily} from "./PlatformFamily";
+import {PlatformLogo} from "./PlatformLogo";
+import {PlatformType} from "./PlatformType";
+import {PlatformVersion} from "./PlatformVersion";
+import {PlatformWebsite} from "./PlatformWebsite";
+
 /**
  * Represents platform information.
  *
@@ -12,13 +19,13 @@ export type Platform = {
     alternative_name?: string;
 
     /** @deprecated DEPRECATED! Use `platform_type` instead. */
-    category?: string; // Assuming Category Enum can be represented as a string
+    category?: number | PlatformCategoryEnum;
 
     /** UUID hash of the object. */
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** The generation of the platform. */
     generation?: number;
@@ -27,13 +34,13 @@ export type Platform = {
     name: string;
 
     /** Reference ID for Platform Family. The family of platforms this one belongs to. */
-    platform_family?: number; // Assuming Platform Family is a reference ID
+    platform_family?: number | PlatformFamily;
 
     /** Reference ID for Platform Logo. The logo of the first Version of this platform. */
-    platform_logo?: number; // Assuming Platform Logo is a reference ID
+    platform_logo?: number | PlatformLogo;
 
     /** Reference ID for Platform Type. The type of the platform. */
-    platform_type?: number; // Assuming Platform Type is a reference ID
+    platform_type?: number | PlatformType;
 
     /** A url-safe, unique, lower-case version of the name. */
     slug: string;
@@ -42,14 +49,14 @@ export type Platform = {
     summary?: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;
 
     /** Array of Platform Version IDs. Associated versions of this platform. */
-    versions?: number[]; // Assuming Platform Version ID is a number
+    versions?: number[] | PlatformVersion[];
 
     /** Array of Platform Website IDs. The main website. */
-    websites?: number[]; // Assuming Platform Website ID is a number
+    websites?: number[] | PlatformWebsite[];
 };

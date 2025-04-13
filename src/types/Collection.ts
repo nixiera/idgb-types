@@ -1,3 +1,7 @@
+import {CollectionRelation} from "./CollectionRelation";
+import {Game} from "./Game";
+import {CollectionType} from "./CollectionType";
+
 /**
  * Represents collection information.
  *
@@ -6,19 +10,19 @@
  */
 export type Collection = {
     /** Array of Collection Relation IDs. */
-    as_child_relations?: number[]; // Assuming Collection Relation ID is a number
+    as_child_relations?: number[] | CollectionRelation[];
 
     /** Array of Collection Relation IDs. */
-    as_parent_relations?: number[]; // Assuming Collection Relation ID is a number
+    as_parent_relations?: number[] | CollectionRelation[];
 
     /** UUID hash of the object. */
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Array of Game IDs. The games that are associated with this collection. */
-    games?: number[];
+    games?: number[] | Game[];
 
     /** Umbrella term for a collection of games. */
     name: string;
@@ -27,10 +31,10 @@ export type Collection = {
     slug: string;
 
     /** Reference ID for Collection Type. The type of collection. */
-    type?: number; // Assuming Collection Type is a reference ID, so it should be a number.
+    type?: number | CollectionType;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;

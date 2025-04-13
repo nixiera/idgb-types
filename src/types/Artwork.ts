@@ -1,3 +1,5 @@
+import {Game} from "./Game";
+
 /**
  * Represents artwork information.
  *
@@ -15,7 +17,7 @@ export type Artwork = {
     checksum: string;
 
     /** Reference ID for Game. The game this artwork is associated with. */
-    game: number; // Based on the context, game is a reference ID, so it should be a number.
+    game: number | Game;
 
     /** The height of the image in pixels. */
     height?: number;

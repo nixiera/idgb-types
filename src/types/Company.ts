@@ -1,3 +1,10 @@
+import {DateCategoryEnum} from "../enums/DateCategoryEnum";
+import {DateFormat} from "./DateFormat";
+import {CompanyLogo} from "./CompanyLogo";
+import {Game} from "./Game";
+import {CompanyStatus} from "./CompanyStatus";
+import {CompanyWebsite} from "./CompanyWebsite";
+
 /**
  * Represents company information.
  *
@@ -9,13 +16,13 @@ export type Company = {
     change_date?: number;
 
     /** @deprecated DEPRECATED! Use `change_date_format` instead. */
-    change_date_category?: string; // Assuming Change Date Category Enum can be represented as a string
+    change_date_category?: number | DateCategoryEnum;
 
     /** Reference ID for Date Format. The format of the change date. */
-    change_date_format?: number; // Assuming Date Format is a reference ID
+    change_date_format?: number | DateFormat;
 
     /** Reference ID for Company. The new ID for a company that has gone through a merger or restructuring. */
-    changed_company_id?: number; // Assuming Company is a reference ID
+    changed_company_id?: number | Company;
 
     /** UUID hash of the object. */
     checksum: string;
@@ -24,7 +31,7 @@ export type Company = {
     country?: number;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** A free text description of a company. */
     description?: string;
@@ -33,16 +40,16 @@ export type Company = {
     developed?: number[];
 
     /** Reference ID for Company Logo. The company’s logo. */
-    logo?: number; // Assuming Company Logo is a reference ID
+    logo?: number | CompanyLogo;
 
     /** Company name. */
     name: string;
 
     /** Reference ID for Company. A company with a controlling interest in a specific company. */
-    parent?: number; // Assuming Company is a reference ID
+    parent?: number | Company;
 
     /** Array of Game IDs. An array of games that a company has published. */
-    published?: number[];
+    published?: number[] | Game[];
 
     /** A url-safe, unique, lower-case version of the name. */
     slug: string;
@@ -51,20 +58,20 @@ export type Company = {
     start_date?: number;
 
     /** @deprecated DEPRECATED! Use `start_date_format` instead. */
-    start_date_category?: string; // Assuming Start Date Category Enum can be represented as a string
+    start_date_category?: number | DateCategoryEnum;
 
     /** Reference ID for Date Format. The format of the start date. */
-    start_date_format?: number; // Assuming Date Format is a reference ID
+    start_date_format?: number | DateFormat;
 
     /** Reference ID for Company Status. The status of the company. */
-    status?: number; // Assuming Company Status is a reference ID
+    status?: number | CompanyStatus;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;
 
     /** Array of Company Website IDs. The company's official websites. */
-    websites?: number[]; // Assuming Company Website is a reference ID
+    websites?: number[] | CompanyWebsite[];
 };

@@ -1,3 +1,6 @@
+import {ExternalGameSource} from "./ExternalGameSource";
+import {PopularitySourceEnum} from "../enums/PopularitySourceEnum";
+
 /**
  * Represents popularity type information.
  *
@@ -9,17 +12,17 @@ export type PopularityType = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for External Game Source. */
-    external_popularity_source: number; // Assuming External Game Source is a reference ID
+    external_popularity_source: number | ExternalGameSource;
 
     /** The name of the popularity type. */
     name: string;
 
     /** @deprecated DEPRECATED! Use `external_popularity_source` instead. */
-    popularity_source?: string; // Assuming Popularity Source Enum can be represented as a string
+    popularity_source?: number | PopularitySourceEnum;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

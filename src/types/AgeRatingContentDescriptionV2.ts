@@ -1,3 +1,5 @@
+import {AgeRatingOrganization} from "./AgeRatingOrganization";
+
 /**
  * Represents age rating content description V2 information.
  *
@@ -9,14 +11,14 @@ export type AgeRatingContentDescriptionV2 = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Description of the age rating content. */
     description: string;
 
     /** Reference ID for Age Rating Organization. The rating organization. */
-    organization: number; // Based on the context, organization is a reference ID, so it should be a number.
+    organization: number | AgeRatingOrganization;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

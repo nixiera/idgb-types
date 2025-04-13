@@ -1,3 +1,5 @@
+import {CollectionType} from "./CollectionType";
+
 /**
  * Represents collection relation type information.
  *
@@ -6,16 +8,16 @@
  */
 export type CollectionRelationType = {
     /** Reference ID for Collection Type. The allowed child collection type. */
-    allowed_child_type: number; // Assuming Collection Type is a reference ID
+    allowed_child_type: number | CollectionType;
 
     /** Reference ID for Collection Type. The allowed parent collection type. */
-    allowed_parent_type: number; // Assuming Collection Type is a reference ID
+    allowed_parent_type: number | CollectionType;
 
     /** UUID hash of the object. */
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** The relationship type description. */
     description?: string;
@@ -24,5 +26,5 @@ export type CollectionRelationType = {
     name: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

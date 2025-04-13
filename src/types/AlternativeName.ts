@@ -1,3 +1,5 @@
+import {Game} from "./Game";
+
 /**
  * Represents alternative name information.
  *
@@ -12,7 +14,7 @@ export type AlternativeName = {
     comment?: string;
 
     /** Reference ID for Game. The game this alternative name is associated with. */
-    game: number; // Based on the context, game is a reference ID, so it should be a number.
+    game: number | Game;
 
     /** An alternative name. */
     name: string;

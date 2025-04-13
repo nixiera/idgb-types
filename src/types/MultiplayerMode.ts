@@ -1,3 +1,6 @@
+import {Game} from "./Game";
+import {Platform} from "./Platform";
+
 /**
  * Represents multiplayer mode information.
  *
@@ -15,7 +18,7 @@ export type MultiplayerMode = {
     dropin?: boolean;
 
     /** Reference ID for Game. The game this multiplayer mode is associated with. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** True if the game supports LAN coop. */
     lancoop?: boolean;
@@ -39,7 +42,7 @@ export type MultiplayerMode = {
     onlinemax?: number;
 
     /** Reference ID for Platform. The platform this multiplayer mode refers to. */
-    platform?: number; // Assuming Platform is a reference ID
+    platform?: number | Platform;
 
     /** True if the game supports split screen, offline multiplayer. */
     splitscreen?: boolean;

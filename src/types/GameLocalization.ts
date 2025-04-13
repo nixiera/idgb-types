@@ -1,3 +1,7 @@
+import {Cover} from "./Cover";
+import {Game} from "./Game";
+import {Region} from "./Region";
+
 /**
  * Represents game localization information.
  *
@@ -9,20 +13,20 @@ export type GameLocalization = {
     checksum: string;
 
     /** Reference ID for Cover. The cover of this game localization. */
-    cover?: number; // Assuming Cover is a reference ID
+    cover?: number | Cover;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Reference ID for Game. The Game the localization belongs to. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** The name of the localization. */
     name: string;
 
     /** Reference ID for Region. The Region of the localization. */
-    region: number; // Assuming Region is a reference ID
+    region: number | Region;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };

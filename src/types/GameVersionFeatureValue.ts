@@ -1,3 +1,7 @@
+import {Game} from "./Game";
+import {GameVersionFeature} from "./GameVersionFeature";
+import {GameVersionFeatureValueEnum} from "../enums/GameVersionFeatureValueEnum";
+
 /**
  * Represents game version feature value information.
  *
@@ -9,13 +13,13 @@ export type GameVersionFeatureValue = {
     checksum: string;
 
     /** Reference ID for Game. The version/edition this value refers to. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** Reference ID for Game Version Feature. The id of the game feature. */
-    game_feature: number; // Assuming Game Version Feature is a reference ID
+    game_feature: number | GameVersionFeature;
 
     /** The boolean value of this feature. */
-    included_feature?: string; // Assuming Included Feature Enum can be represented as a string
+    included_feature?: number | GameVersionFeatureValueEnum;
 
     /** The text value of this feature. */
     note?: string;

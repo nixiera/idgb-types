@@ -1,4 +1,4 @@
-export enum CompanyStartDateCategoryEnum {
+export enum DateCategoryEnum {
     YYYYMMMMDD = 0,
     YYYYMMMM = 1,
     YYYY = 2,

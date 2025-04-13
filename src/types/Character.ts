@@ -1,3 +1,8 @@
+import {CharacterGenderEnum} from "../enums/CharacterGenderEnum";
+import {CharacterSpeciesEnum} from "../enums/CharacterSpeciesEnum";
+import {Game} from "./Game";
+import {CharacterMugShot} from "./CharacterMugShot";
+
 /**
  * Represents character information.
  *
@@ -9,10 +14,10 @@ export type Character = {
     akas?: string[];
 
     /** Reference ID for Character Gender. */
-    character_gender?: number; // Assuming Character Gender is a reference ID
+    character_gender?: number | CharacterGenderEnum;
 
     /** Reference ID for Character Specie. */
-    character_species?: number; // Assuming Character Specie is a reference ID
+    character_species?: number | CharacterSpeciesEnum;
 
     /** UUID hash of the object. */
     checksum: string;
@@ -21,19 +26,19 @@ export type Character = {
     country_name?: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** A text describing a character. */
     description?: string;
 
     /** Array of Game IDs. */
-    games?: number[];
+    games?: number[] | Game[];
 
     /** @deprecated DEPRECATED! Use `character_gender` instead. */
-    gender?: string; // Assuming Gender Enum can be represented as a string
+    gender?: number | CharacterGenderEnum;
 
     /** Reference ID for Character Mug Shot. An image depicting a character. */
-    mug_shot?: number; // Assuming Character Mug Shot is a reference ID
+    mug_shot?: number | CharacterMugShot;
 
     /** Character's name. */
     name: string;
@@ -42,10 +47,10 @@ export type Character = {
     slug?: string;
 
     /** @deprecated DEPRECATED! Use `character_species` instead. */
-    species?: string; // Assuming Species Enum can be represented as a string
+    species?: number | CharacterSpeciesEnum;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;

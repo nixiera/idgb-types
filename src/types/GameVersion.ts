@@ -1,3 +1,6 @@
+import {GameVersionFeature} from "./GameVersionFeature";
+import {Game} from "./Game";
+
 /**
  * Represents game version information.
  *
@@ -9,19 +12,19 @@ export type GameVersion = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** Array of Game Version Feature IDs. Features and descriptions of what makes each version/edition different from the main game. */
-    features?: number[]; // Assuming Game Version Feature ID is a number
+    features?: number[] | GameVersionFeature[];
 
     /** Reference ID for Game. The game these versions/editions are of. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** Array of Game IDs. Game Versions and Editions. */
-    games?: number[]; // Assuming Game ID is a number
+    games?: number[] | Game[];
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 
     /** The website address (URL) of the item. */
     url?: string;

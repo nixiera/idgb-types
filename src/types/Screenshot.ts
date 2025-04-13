@@ -1,3 +1,5 @@
+import {Game} from "./Game";
+
 /**
  * Represents screenshot information.
  *
@@ -15,7 +17,7 @@ export type Screenshot = {
     checksum: string;
 
     /** Reference ID for Game. The game this video is associated with. */
-    game: number; // Assuming Game is a reference ID
+    game: number | Game;
 
     /** The height of the image in pixels. */
     height?: number;

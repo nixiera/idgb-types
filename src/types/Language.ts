@@ -9,7 +9,7 @@ export type Language = {
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: string; // Assuming datetime can be represented as a string
+    created_at: number | Date;
 
     /** The combination of Language code and Country code. */
     locale?: string;
@@ -21,5 +21,5 @@ export type Language = {
     native_name?: string;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: string; // Assuming datetime can be represented as a string
+    updated_at: number | Date;
 };
