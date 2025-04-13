@@ -1,10 +1,12 @@
 {
   "name": "igdb-types",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "TypeScript type definitions for IGDB API responses",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": "https://github.com/nixiera/idgb-types.git",
+  "homepage": "https://github.com/nixiera/idgb-types.git",
   "files": [
     "dist"
   ],
