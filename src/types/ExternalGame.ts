@@ -1,8 +1,8 @@
-import {ExternalGameCategoryEnum} from "../enums/ExternalGameCategoryEnum";
+import {ExternalGameCategoryEnum} from "../enums";
 import {ExternalGameSource} from "./ExternalGameSource";
 import {Game} from "./Game";
 import {GameReleaseFormat} from "./GameReleaseFormat";
-import {ExternalGameMediaEnum} from "../enums/ExternalGameMediaEnum";
+import {ExternalGameMediaEnum} from "../enums";
 import {Platform} from "./Platform";
 
 /**

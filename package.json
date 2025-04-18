@@ -1,6 +1,6 @@
 {
   "name": "igdb-types",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "TypeScript type definitions for IGDB API responses",
   "type": "module",
   "main": "dist/index.js",
@@ -8,11 +8,17 @@
   "repository": "https://github.com/nixiera/idgb-types.git",
   "homepage": "https://github.com/nixiera/idgb-types.git",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "docs"
   ],
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "version-check": "node scripts/version-check.js",
+    "prepublishOnly": "npm run version-check",
+    "docs": "typedoc",
+    "docs:serve": "npx serve docs/api"
   },
   "keywords": [
     "igdb",
@@ -23,9 +29,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/bun": "latest",
-    "typescript": "^5.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.8.3",
+    "typedoc": "^0.25.12"
   }
 }

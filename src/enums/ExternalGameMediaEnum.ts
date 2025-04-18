@@ -1,4 +1,4 @@
 export enum ExternalGameMediaEnum {
-    digital = 1,
-    physical = 2,
+    DIGITAL = 1,
+    PHYSICAL = 2,
 }

@@ -1,7 +1,7 @@
-import {DateCategoryEnum} from "../enums/DateCategoryEnum";
+import {DateCategoryEnum} from "../enums";
 import {DateFormat} from "./DateFormat";
 import {PlatformVersion} from "./PlatformVersion";
-import {RegionEnum} from "../enums/RegionEnum";
+import {RegionEnum} from "../enums";
 import {ReleaseDateRegion} from "./ReleaseDateRegion";
 
 /**

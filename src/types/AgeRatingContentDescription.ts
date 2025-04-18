@@ -1,4 +1,4 @@
-import {AgeRatingContentDescriptionCategoryEnum} from "../enums/AgeRatingContentDescriptionCategoryEnum";
+import {AgeRatingContentDescriptionCategoryEnum} from "../enums";
 
 /**
  * Represents age rating content description information.

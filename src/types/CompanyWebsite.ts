@@ -1,5 +1,5 @@
 import {WebsiteType} from "./WebsiteType";
-import {WebsiteCategoryEnum} from "../enums/WebsiteCategoryEnum";
+import {WebsiteCategoryEnum} from "../enums";
 
 /**
  * Represents company website information.

@@ -1,4 +1,4 @@
-import {GameVersionFeatureCategoryEnum} from "../enums/GameVersionFeatureCategoryEnum";
+import {GameVersionFeatureCategoryEnum} from "../enums";
 import {GameVersionFeatureValue} from "./GameVersionFeatureValue";
 
 /**

@@ -1,17 +1,17 @@
 /**
- * Represents character specie information.
+ * Represents character species information.
  *
  * Request Path: https://api.igdb.com/v4/character_species
  * Description: Character Species.
  */
-export type CharacterSpecie = {
+export type CharacterSpecies = {
     /** UUID hash of the object. */
     checksum: string;
 
     /** Date this was initially added to the IGDB database. */
     created_at: number | Date;
 
-    /** The name of the character specie. */
+    /** The name of the character species. */
     name: string;
 
     /** The last date this entry was updated in the IGDB database. */

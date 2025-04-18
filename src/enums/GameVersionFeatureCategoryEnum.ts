@@ -1,4 +1,4 @@
 export enum GameVersionFeatureCategoryEnum {
-    boolean = 0,
-    description = 1,
+    BOOLEAN = 0,
+    DESCRIPTION = 1,
 }

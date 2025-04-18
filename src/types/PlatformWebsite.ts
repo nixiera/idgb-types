@@ -1,4 +1,4 @@
-import {WebsiteCategoryEnum} from "../enums/WebsiteCategoryEnum";
+import {WebsiteCategoryEnum} from "../enums";
 
 /**
  * Represents platform website information.

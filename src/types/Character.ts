@@ -1,5 +1,5 @@
-import {CharacterGenderEnum} from "../enums/CharacterGenderEnum";
-import {CharacterSpeciesEnum} from "../enums/CharacterSpeciesEnum";
+import {CharacterGenderEnum} from "../enums";
+import {CharacterSpeciesEnum} from "../enums";
 import {Game} from "./Game";
 import {CharacterMugShot} from "./CharacterMugShot";
 

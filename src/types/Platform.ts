@@ -1,4 +1,4 @@
-import {PlatformCategoryEnum} from "../enums/PlatformCategoryEnum";
+import {PlatformCategoryEnum} from "../enums";
 import {PlatformFamily} from "./PlatformFamily";
 import {PlatformLogo} from "./PlatformLogo";
 import {PlatformType} from "./PlatformType";
