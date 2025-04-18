@@ -1,7 +1,7 @@
 import {AgeRating} from "./AgeRating";
 import {AlternativeName} from "./AlternativeName";
 import {Artwork} from "./Artwork";
-import {GameCategoryEnum} from "../enums/GameCategoryEnum";
+import {GameCategoryEnum} from "../enums";
 import {Collection} from "./Collection";
 import {Cover} from "./Cover";
 import {ExternalGame} from "./ExternalGame";
@@ -20,10 +20,11 @@ import {Platform} from "./Platform";
 import {PlayerPerspective} from "./PlayerPerspective";
 import {ReleaseDate} from "./ReleaseDate";
 import {Screenshot} from "./Screenshot";
-import {GameStatusEnum} from "../enums/GameStatusEnum";
+import {GameStatusEnum} from "../enums";
 import {Theme} from "./Theme";
 import {GameVideo} from "./GameVideo";
 import {Website} from "./Website";
+import {UUID, UnixTimestamp, Rating, NonNegativeInteger, URL} from "./utility";
 
 /**
  * Represents game information.
@@ -36,10 +37,10 @@ export type Game = {
     age_ratings?: number[] | AgeRating[];
 
     /** Rating based on external critic scores. */
-    aggregated_rating?: number;
+    aggregated_rating?: Rating;
 
     /** Number of external critic scores. */
-    aggregated_rating_count?: number;
+    aggregated_rating_count?: NonNegativeInteger;
 
     /** Array of Alternative Name IDs. Alternative names for this game. */
     alternative_names?: number[] | AlternativeName[];
@@ -54,7 +55,7 @@ export type Game = {
     category?: number | GameCategoryEnum;
 
     /** UUID hash of the object. */
-    checksum: string;
+    checksum: UUID;
 
     /** @deprecated DEPRECATED! Use `collections` instead. */
     collection?: number | Collection;
@@ -66,7 +67,7 @@ export type Game = {
     cover?: number | Cover;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: number | Date;
+    created_at: UnixTimestamp | Date;
 
     /** Array of Game IDs. DLCs for this game. */
     dlcs?: number[] | Game[];
@@ -81,10 +82,10 @@ export type Game = {
     external_games?: number[] | ExternalGame[];
 
     /** Unix Time Stamp. The first release date for this game. */
-    first_release_date?: number;
+    first_release_date?: UnixTimestamp;
 
     /** @deprecated DEPRECATED! - To be removed. */
-    follows?: number;
+    follows?: NonNegativeInteger;
 
     /** Array of Game IDs. Forks of this game. */
     forks?: number[] | Game[];
@@ -114,7 +115,7 @@ export type Game = {
     genres?: number[] | Genre[];
 
     /** Number of follows a game gets before release. */
-    hypes?: number;
+    hypes?: NonNegativeInteger;
 
     /** Array of Involved Company IDs. Companies who developed this game. */
     involved_companies?: number[] | InvolvedCompany[];
@@ -144,10 +145,10 @@ export type Game = {
     ports?: number[] | Game[];
 
     /** Average IGDB user rating. */
-    rating?: number;
+    rating?: Rating;
 
     /** Total number of IGDB user ratings. */
-    rating_count?: number;
+    rating_count?: NonNegativeInteger;
 
     /** Array of Release Date IDs. Release dates of this game. */
     release_dates?: number[] | ReleaseDate[]
@@ -186,16 +187,16 @@ export type Game = {
     themes?: number[] | Theme[];
 
     /** Average rating based on both IGDB user and external critic scores. */
-    total_rating?: number;
+    total_rating?: Rating;
 
     /** Total number of user and external critic scores. */
-    total_rating_count?: number;
+    total_rating_count?: NonNegativeInteger;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: number | Date;
+    updated_at: UnixTimestamp | Date;
 
     /** The website address (URL) of the item. */
-    url?: string;
+    url?: URL;
 
     /** Reference ID for Game. If a version, this is the main game. */
     version_parent?: number | Game;

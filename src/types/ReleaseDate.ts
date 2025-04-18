@@ -1,9 +1,10 @@
-import {DateCategoryEnum} from "../enums/DateCategoryEnum";
+import {DateCategoryEnum} from "../enums";
 import {DateFormat} from "./DateFormat";
 import {Platform} from "./Platform";
-import {RegionEnum} from "../enums/RegionEnum";
+import {RegionEnum} from "../enums";
 import {ReleaseDateRegion} from "./ReleaseDateRegion";
 import {ReleaseDateStatus} from "./ReleaseDateStatus";
+import {UUID, UnixTimestamp, ISODateString, Month, Year} from "./utility";
 
 /**
  * Represents release date information.
@@ -16,13 +17,13 @@ export type ReleaseDate = {
     category?: number | DateCategoryEnum;
 
     /** UUID hash of the object. */
-    checksum: string;
+    checksum: UUID;
 
     /** Date this was initially added to the IGDB database. */
-    created_at: number | Date;
+    created_at: UnixTimestamp | Date;
 
     /** The date of the release. */
-    date?: string;
+    date?: ISODateString;
 
     /** Reference ID for Date Format. The format of the change date. */
     date_format?: number | DateFormat;
@@ -34,7 +35,7 @@ export type ReleaseDate = {
     human?: string;
 
     /** The month as an integer starting at 1 (January). */
-    m?: number;
+    m?: Month;
 
     /** Reference ID for Platform. The platform of the release. */
     platform: number | Platform;
@@ -49,8 +50,8 @@ export type ReleaseDate = {
     status?: number | ReleaseDateStatus;
 
     /** The last date this entry was updated in the IGDB database. */
-    updated_at: number | Date;
+    updated_at: UnixTimestamp | Date;
 
     /** The year in full (2018). */
-    y?: number;
+    y?: Year;
 };

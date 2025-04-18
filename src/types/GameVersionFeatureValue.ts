@@ -1,9 +1,9 @@
 import {Game} from "./Game";
 import {GameVersionFeature} from "./GameVersionFeature";
-import {GameVersionFeatureValueEnum} from "../enums/GameVersionFeatureValueEnum";
+import {GameVersionFeatureValueEnum} from "../enums";
 
 /**
- * Represents game version feature value information.
+ * Represents game version features value information.
  *
  * Request Path: https://api.igdb.com/v4/game_version_feature_values
  * Description: The bool/text value of the feature.

@@ -1,7 +1,7 @@
-import {AgeRatingCategoryEnum} from "../enums/AgeRatingCategoryEnum";
+import {AgeRatingCategoryEnum} from "../enums";
 import {AgeRatingContentDescription} from "./AgeRatingContentDescription";
 import {AgeRatingOrganization} from "./AgeRatingOrganization";
-import {AgeRatingRatingEnum} from "../enums/AgeRatingRatingEnum";
+import {AgeRatingRatingEnum} from "../enums";
 import {AgeRatingCategory} from "./AgeRatingCategory";
 import {AgeRatingContentDescriptionV2} from "./AgeRatingContentDescriptionV2";
 
@@ -9,7 +9,7 @@ import {AgeRatingContentDescriptionV2} from "./AgeRatingContentDescriptionV2";
  * Represents age rating information.
  *
  * Request Path: https://api.igdb.com/v4/age_ratings
- * Description: Age Rating according to various rating organisations.
+ * Description: Age Rating according to various rating organizations.
  */
 export type AgeRating = {
     /** @deprecated DEPRECATED! Use `organization` instead. */

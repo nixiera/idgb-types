@@ -1,4 +1,4 @@
-import {DateCategoryEnum} from "../enums/DateCategoryEnum";
+import {DateCategoryEnum} from "../enums";
 import {DateFormat} from "./DateFormat";
 import {CompanyLogo} from "./CompanyLogo";
 import {Game} from "./Game";

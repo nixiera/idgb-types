@@ -1,0 +1,20 @@
+{
+  "entryPoints": ["./src/types", "./src/enums"],
+  "out": "docs/api",
+  "skipErrorChecking": true,
+  "name": "IGDB Types API Documentation",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "readme": "README.md",
+  "theme": "default",
+  "categorizeByGroup": true,
+  "categoryOrder": ["Types", "Enums", "Validators", "Utilities", "*"],
+  "sort": ["alphabetical"],
+  "searchInComments": true,
+  "navigationLinks": {
+    "GitHub": "https://github.com/nixiera/idgb-types",
+    "IGDB API": "https://api-docs.igdb.com/"
+  }
+}

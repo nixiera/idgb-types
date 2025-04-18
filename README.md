@@ -12,6 +12,8 @@ enhancing development speed and reducing errors.
   is not officially supported or endorsed by IGDB.
 * **Maintenance Effort:** I will do my best to keep the type up to date with IGDB's API. However, due to the unofficial
   nature, there may be delays or inaccuracies.
+* **Versioning Strategy:** This package follows semantic versioning (MAJOR.MINOR.PATCH). See our [versioning strategy](./docs/VERSION.md) 
+  for details on how we handle API changes, deprecations, and breaking changes.
 * **Contributions Welcome:** If you find errors or have improvements, please feel free to submit pull requests.
 * **Relationship Expansion:** Most fields with a secondary key also have an optional Type apart from ID, in case if the
   relationship needs to be expanded.
@@ -46,7 +48,9 @@ import { Game, GameStatusEnum } from 'igdb-types';
 
 ## API Overview
 
-This package provides TypeScript definitions for all entities in the IGDB API. Here's an overview of the main categories:
+This package provides TypeScript definitions for all entities in the IGDB API, along with runtime type validation using Zod. Here's an overview of the main categories:
+
+> **Note:** For a comprehensive mapping between types and IGDB API endpoints, see the [endpoints documentation](./docs/endpoints.md).
 
 ### Core Game Data
 - `Game`: The central type representing a video game with all its properties
@@ -77,6 +81,22 @@ This package provides TypeScript definitions for all entities in the IGDB API. H
 - `ReleaseDate`: Game release dates
 - `Region`: Geographic regions
 
+### Runtime Type Validation
+
+This package includes Zod validators for all types and enums, allowing you to validate data at runtime:
+
+- `GameSchema`: Validates Game objects
+- `GameStatusSchema`: Validates GameStatus objects
+- `GameTypeSchema`: Validates GameType objects
+- And many more...
+
+Each validator comes with a corresponding type guard function:
+
+- `isGame`: Checks if a value is a valid Game object
+- `isGameStatus`: Checks if a value is a valid GameStatus object
+- `isGameType`: Checks if a value is a valid GameType object
+- And many more...
+
 ## Usage Examples
 
 ### Basic Type Usage
@@ -98,6 +118,49 @@ const game: Game = {
 // Access properties with full type safety
 console.log(game.name); // "The Witcher 3: Wild Hunt"
 console.log(game.first_release_date); // 1431993600
+```
+
+### Runtime Type Validation
+
+```typescript
+import { GameSchema, validate, isGame } from 'igdb-types/validators';
+
+// Validate a game object using the schema and validate function
+const gameData = {
+  name: "The Witcher 3: Wild Hunt",
+  slug: "the-witcher-3-wild-hunt",
+  checksum: "abc123",
+  created_at: 1431993600,
+  updated_at: 1431993600
+};
+
+// Method 1: Using the validate utility function
+const result = validate(GameSchema, gameData);
+if (result.success) {
+  // Data is valid and typed as Game
+  const validatedGame = result.data;
+  console.log(`Validated game: ${validatedGame.name}`);
+} else {
+  // Data is invalid, error contains validation details
+  console.error('Validation failed:', result.error);
+}
+
+// Method 2: Using the type guard function
+if (isGame(gameData)) {
+  // gameData is now typed as Game
+  console.log(`Valid game: ${gameData.name}`);
+} else {
+  console.error('Invalid game object');
+}
+
+// Method 3: Direct schema validation
+try {
+  // Parse will throw an error if validation fails
+  const validatedGame = GameSchema.parse(gameData);
+  console.log(`Validated game: ${validatedGame.name}`);
+} catch (error) {
+  console.error('Validation failed:', error);
+}
 ```
 
 ### Working with Enums

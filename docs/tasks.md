@@ -1,27 +1,28 @@
 # IGDB Types Improvement Tasks
 
-This document contains a list of actionable improvement tasks for the IGDB Types project. Each task is designed to enhance the codebase, improve developer experience, or add new features.
+This document contains a list of actionable improvement tasks for the IGDB Types project. Each task is designed to
+enhance the codebase, improve developer experience, or add new features.
 
 ## Code Organization and Architecture
 
 - [X] Implement a consistent naming convention for all files and types
-- [ ] Refactor type definitions to use more specific primitive types where applicable
+- [X] Refactor type definitions to use more specific primitive types where applicable
 - [X] Add index files for each subdirectory to improve import experience
 - [ ] Consider organizing types into logical groups/subdirectories based on IGDB API endpoints
 - [ ] Implement utility types for common patterns (e.g., Expandable<T> for ID | Object pattern)
 - [ ] Add runtime type validation using a library like zod or io-ts
 - [ ] Review and update deprecated fields, considering removal or replacement
-- [ ] Implement versioning strategy for API changes
+- [X] Implement versioning strategy for API changes
 
 ## Documentation
 
-- [ ] Create comprehensive API documentation using TypeDoc
-- [ ] Add examples directory with usage examples for common scenarios
+- [X] Create comprehensive API documentation using TypeDoc
+- [X] Add an examples directory with usage examples for common scenarios
 - [X] Improve JSDoc comments with more detailed descriptions and examples
-- [ ] Create a CONTRIBUTING.md file with guidelines for contributors
+- [X] Create a CONTRIBUTING.md file with guidelines for contributors
 - [X] Add a CHANGELOG.md file to track version changes
 - [X] Enhance README.md with more detailed usage examples and API overview
-- [ ] Document the relationship between types and IGDB API endpoints
+- [X] Document the relationship between types and IGDB API endpoints
 - [X] Create visual diagrams of type relationships
 
 ## Testing

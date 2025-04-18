@@ -1,6 +1,9 @@
 /**
  * This file exports all type definitions from the types directory.
  * It allows for cleaner imports in other files.
+ * 
+ * It also exports utility types that provide more specific primitive types
+ * for use across the codebase.
  */
 
 export * from './AgeRating';
@@ -73,3 +76,4 @@ export * from './Search';
 export * from './Theme';
 export * from './Website';
 export * from './WebsiteType';
+export * from './utility';

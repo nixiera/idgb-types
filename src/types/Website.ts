@@ -1,4 +1,4 @@
-import {WebsiteCategoryEnum} from "../enums/WebsiteCategoryEnum";
+import {WebsiteCategoryEnum} from "../enums";
 import {Game} from "./Game";
 import {WebsiteType} from "./WebsiteType";
 

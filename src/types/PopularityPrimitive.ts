@@ -1,5 +1,5 @@
 import {ExternalGameSource} from "./ExternalGameSource";
-import {PopularitySourceEnum} from "../enums/PopularitySourceEnum";
+import {PopularitySourceEnum} from "../enums";
 import {PopularityType} from "./PopularityType";
 
 /**

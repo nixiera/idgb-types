@@ -4,9 +4,9 @@ This directory contains visual diagrams that illustrate the relationships betwee
 
 ## Available Diagrams
 
-1. [Game Type Relationships](./game-relationships.md) - Shows the relationships between the `Game` type and other major types
-2. [Platform Type Relationships](./platform-relationships.md) - Shows the relationships between the `Platform` type and other types
-3. [Company Type Relationships](./company-relationships.md) - Shows the relationships between the `Company` type and other types
+1. [Game Type Relationships](game-relationships.md) - Shows the relationships between the `Game` type and other major types
+2. [Platform Type Relationships](platform-relationships.md) - Shows the relationships between the `Platform` type and other types
+3. [Company Type Relationships](company-relationships.md) - Shows the relationships between the `Company` type and other types
 
 ## How to Use These Diagrams
 

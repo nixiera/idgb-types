@@ -10,7 +10,7 @@ export type AlternativeName = {
     /** UUID hash of the object. */
     checksum: string;
 
-    /** A description of what kind of alternative name it is (Acronym, Working title, Japanese title etc). */
+    /** A description of the alternative name it is (an Acronym, Working title, Japanese title etc.). */
     comment?: string;
 
     /** Reference ID for Game. The game this alternative name is associated with. */
