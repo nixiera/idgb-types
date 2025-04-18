@@ -18,6 +18,7 @@ enhancing development speed and reducing errors.
 * **Relationship Expansion:** Most fields with a secondary key also have an optional Type apart from ID, in case if the
   relationship needs to be expanded.
 * **Use at your own risk.** As this is not an official package, there is no warranty.
+* VALIDATORS REMOVED TEMPORARILY - To remove executable code from build and also reduce package size.
 
 ## Installation
 
