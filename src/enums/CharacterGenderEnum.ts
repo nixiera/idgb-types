@@ -1,5 +1,5 @@
 export enum CharacterGenderEnum {
-    Male = 1,
-    Female = 2,
-    Other = 3
+    MALE = 1,
+    FEMALE = 2,
+    OTHER = 3
 }

@@ -1,93 +1,10 @@
 /**
- * Exporting all Enums
+ * Export all enums and types from their respective index files.
+ * This approach improves maintainability and allows for cleaner imports.
  */
-export * from './enums/AgeRatingCategoryEnum';
-export * from './enums/AgeRatingContentDescriptionCategoryEnum';
-export * from './enums/AgeRatingRatingEnum';
-export * from './enums/CharacterGenderEnum';
-export * from './enums/CharacterSpeciesEnum';
-export * from './enums/DateCategoryEnum';
-export * from './enums/ExternalGameCategoryEnum';
-export * from './enums/ExternalGameMediaEnum';
-export * from './enums/GameCategoryEnum';
-export * from './enums/GameStatusEnum';
-export * from './enums/GameVersionFeatureCategoryEnum';
-export * from './enums/GameVersionFeatureValueEnum';
-export * from './enums/PlatformCategoryEnum';
-export * from './enums/PlatformWebsiteCategoryEnum';
-export * from './enums/PopularitySourceEnum';
-export * from './enums/RegionEnum';
-export * from './enums/WebsiteCategoryEnum';
-/**
- * Exporting all Types
- */
-export * from './types/AgeRating';
-export * from './types/AgeRatingCategory';
-export * from './types/AgeRatingContentDescription';
-export * from './types/AgeRatingContentDescriptionV2';
-export * from './types/AgeRatingOrganization';
-export * from './types/AlternativeName';
-export * from './types/Artwork';
-export * from './types/Character';
-export * from './types/CharacterGender';
-export * from './types/CharacterMugShot';
-export * from './types/CharacterSpecie';
-export * from './types/Collection';
-export * from './types/CollectionMembership';
-export * from './types/CollectionMembershipType';
-export * from './types/CollectionRelation';
-export * from './types/CollectionRelationType';
-export * from './types/CollectionType';
-export * from './types/Company';
-export * from './types/CompanyLogo';
-export * from './types/CompanyStatus';
-export * from './types/CompanyWebsite';
-export * from './types/Cover';
-export * from './types/DateFormat';
-export * from './types/Event';
-export * from './types/EventLogo';
-export * from './types/EventNetwork';
-export * from './types/ExternalGame';
-export * from './types/ExternalGameSource';
-export * from './types/Franchise';
-export * from './types/Game';
-export * from './types/GameEngine';
-export * from './types/GameEngineLogo';
-export * from './types/GameLocalization';
-export * from './types/GameMode';
-export * from './types/GameReleaseFormat';
-export * from './types/GameStatus';
-export * from './types/GameTimeToBeat';
-export * from './types/GameType';
-export * from './types/GameVersion';
-export * from './types/GameVersionFeature';
-export * from './types/GameVersionFeatureValue';
-export * from './types/GameVideo';
-export * from './types/Genre';
-export * from './types/InvolvedCompany';
-export * from './types/Keyword';
-export * from './types/Language';
-export * from './types/LanguageSupport';
-export * from './types/LanguageSupportType';
-export * from './types/MultiplayerMode';
-export * from './types/NetworkType';
-export * from './types/Platform';
-export * from './types/PlatformFamily';
-export * from './types/PlatformLogo';
-export * from './types/PlatformType';
-export * from './types/PlatformVersion';
-export * from './types/PlatformVersionCompany';
-export * from './types/PlatformVersionReleaseDate';
-export * from './types/PlatformWebsite';
-export * from './types/PlayerPerspective';
-export * from './types/PopularityPrimitive';
-export * from './types/PopularityType';
-export * from './types/Region';
-export * from './types/ReleaseDate';
-export * from './types/ReleaseDateRegion';
-export * from './types/ReleaseDateStatus';
-export * from './types/Screenshot';
-export * from './types/Search';
-export * from './types/Theme';
-export * from './types/Website';
-export * from './types/WebsiteType';
+
+// Export all enums
+export * from './enums';
+
+// Export all types
+export * from './types';

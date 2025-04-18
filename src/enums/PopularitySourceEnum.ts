@@ -1,4 +1,4 @@
 export enum PopularitySourceEnum {
-    steam = 1,
-    igdb = 121
+    STEAM = 1,
+    IGDB = 121
 }

@@ -1,6 +1,6 @@
 {
   "name": "igdb-types",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "TypeScript type definitions for IGDB API responses",
   "type": "module",
   "main": "dist/index.js",
@@ -23,9 +23,9 @@
   "license": "MIT",
   "devDependencies": {
     "@types/bun": "latest",
-    "typescript": "^5.0.0"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.8.3"
   }
 }

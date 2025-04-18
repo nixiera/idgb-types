@@ -1,7 +1,7 @@
 export enum CharacterSpeciesEnum {
-    Human = 1,
-    Alien = 2,
-    Animal = 3,
-    Android = 4,
-    Unknown = 5
+    HUMAN = 1,
+    ALIEN = 2,
+    ANIMAL = 3,
+    ANDROID = 4,
+    UNKNOWN = 5
 }
